@@ -58,7 +58,6 @@ class Short_Parser {
      */
     public function parse($content)
     {
-		echo 'test';
         if (!self::$shortcodes)
             return $content;
         $shortcodes = implode('|', array_map('preg_quote', array_keys(self::$shortcodes)));
@@ -142,7 +141,6 @@ class shortcodes {
             if (!isset(self::$reg['tabs_script']))
             {
                 $return .= '<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" type="text/css" rel="stylesheet" />';
-                //$return .= '<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.14/themes/smoothness/jquery-ui.css" type="text/css" rel="stylesheet" />';
                 $return .= '<script type="text/javascript" src="http://127.0.0.1/uapp/system/cms/themes/pyrocms/js/jquery/jquery-ui.min.js"></script>';
                 $return .= '<script>$(function() {$( ".tabs" ).tabs();});</script>';
                 self::$reg['tabs_script'] = true;
